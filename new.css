@@ -314,7 +314,7 @@ a {
 
 .parallax {
     /* The image used */
-    background-image: url("http://www.kiminona.com/images/top/staff_vsl.jpg");
+    background-image: url("./img/sky.jpg");
 
     /* Set a specific height */
     min-height: 100vh;
