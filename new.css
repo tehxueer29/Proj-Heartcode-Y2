@@ -1,0 +1,388 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap');
+
+/* width */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: #192D5E;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    border-radius: 50px;
+    background: #FFD750;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #ffe9a0;
+}
+
+body {
+    scroll-behavior: smooth;
+    font-family: 'Roboto Condensed', sans-serif;
+
+}
+
+.bg-blue {
+    background-color: #3C50FF;
+}
+
+.bg-darkblue {
+    background-color: #192d64;
+}
+
+.bg-yellow {
+    background-color: #FFD750;
+}
+
+.text-lblue {
+    color: #3C50FF;
+}
+
+.text-libre, .information h1, h2 {
+    font-weight: bold;
+
+}
+
+.information h1 {
+    font-size: 2rem;
+}
+
+.text-lato, p {
+    font-family: 'Lato', sans-serif;
+}
+
+h2 {
+    margin: 0px;
+}
+
+/* special button start */
+.special-button {
+    background-color: transparent;
+    color: white;
+    border-radius: 65px;
+    padding: 15px 20px;
+    border: 1px white solid;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    transition: color .15s ease;
+}
+
+.special-button::before {
+    content: "";
+    display: block;
+    background-color: white;
+    position: absolute;
+    width: 170px;
+    bottom: -50px;
+    left: 0px;
+    transition: transform .15s ease-in-out;
+}
+
+.special-button:hover::before {
+    content: "asd";
+    color: white;
+    height: 55px;
+    transform: translateY(-50px);
+    position: absolute;
+    z-index: -1;
+}
+
+.special-button:hover {
+    color: #192D5E;
+}
+/* special button end */
+
+/* special button 2 start */
+.special-button-2 {
+    background-color: transparent;
+    color: white;
+    border-radius: 65px;
+    padding: 10px 30px;
+    border: 1px white solid;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    transition: color .15s ease;
+}
+
+.special-button-2::before {
+    content: "";
+    display: block;
+    background-color: white;
+    position: absolute;
+    width: 170px;
+    bottom: -50px;
+    left: 0px;
+    transition: transform .15s ease-in-out;
+}
+
+.special-button-2:hover::before {
+    content: "asd";
+    color: white;
+    height: 55px;
+    transform: translateY(-50px);
+    position: absolute;
+    z-index: -1;
+}
+
+.special-button-2:hover {
+    color: #192D5E;
+}
+/* special button 2 end */
+
+h1 {
+    margin: 0px;
+}
+
+.circle {
+    background-color: #FFD750;
+    height: 50vh;
+    aspect-ratio: 1/1;
+    border-radius: 50%;
+    transition: transform 1s;
+    /* box-shadow: #FFD750 0px 8px 24px; */
+}
+
+.circle:hover {
+    transform: translateY(-30px);
+}
+
+.hand-holding {
+    position: absolute;
+    bottom: 30px;
+    height: 50vh;
+}
+
+.custom-flex {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.dark-blue {
+    color: #192D5E;
+}
+
+.position-arrow {
+    position: relative;
+    bottom: -70px;
+    height: 100px;
+}
+
+.point-down {
+    height: 0px;
+    width: 2px;
+    background-color: #192D5E;
+    padding: 0px;
+    animation: point-down 3s ease-in-out infinite;
+}
+
+@keyframes point-down {
+    50% {
+        height: 140px;
+    }
+
+    100% {
+        height: 140px;
+    }
+}
+
+/* The flip card container - set the width and height to whatever you want. We have added the border property to demonstrate that the flip itself goes out of the box on hover (remove perspective if you don't want the 3D effect */
+
+.flip-card {
+    background-color: transparent;
+    height: 356px;
+    width: 346px;
+    perspective: 1000px;
+    /* Remove this if you don't want the 3D effect */
+}
+
+/* This container is needed to position the front and back side */
+
+.flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+}
+
+/* Do an horizontal flip when you move the mouse over the flip box container */
+
+.flip-card:hover .flip-card-inner {
+    transform: rotateY(180deg);
+}
+
+/* Position the front and back side */
+
+.flip-card-front, .flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden;
+    /* Safari */
+    backface-visibility: hidden;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+/* Style the front side (fallback if image is missing) */
+
+.flip-card-front {
+    color: black;
+}
+
+.flip-card-front p {
+    position: absolute;
+    bottom: -16px;
+    right: 0px;
+    padding: 10px 15px;
+    color: white;
+    font-weight: bold;
+    letter-spacing: 1px;
+    background-color: #192D5E;
+    border-radius: 10px 0px 0px 0px;
+}
+
+/* Style the back side */
+
+.flip-card-back {
+    background-color: #192D5E;
+    color: white;
+    padding: 0px 60px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transform: rotateY(180deg);
+}
+
+.flip-card-back h1 {
+    font-size: 3rem;
+}
+
+.flip-card-back p {
+    font-size: 1.5rem;
+}
+
+a {
+    text-decoration: none;
+}
+
+.subtitle {
+    font-size: 1.2rem;
+    width: 60ch;
+}
+
+.glass-bg {
+    background-color: rgba(255, 255, 255, 0.336);
+    border-radius: 40px;
+    box-shadow:
+        0 2px 1px hsla(0, 0%, 100%, 0.5) inset,
+        0 -2px 6px hsla(0, 0%, 100%, 0.25);
+}
+
+.tip {
+    font-size: 1.3rem;
+}
+
+.carousel-img {
+    border-radius: 50%;
+    aspect-ratio: 1/1;
+}
+
+.custom-carousel-padding {
+    padding: 3rem 10rem;
+}
+
+.btn:hover {
+    background-color: #ffe9a0;
+}
+
+.btn {
+    background-color: #FFD750;
+}
+
+.parallax {
+    /* The image used */
+    background-image: url("http://www.kiminona.com/images/top/staff_vsl.jpg");
+
+    /* Set a specific height */
+    min-height: 100vh;
+
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center bottom 30%;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.card-opening {
+    font-size: 0.8rem;
+}
+
+.wave {
+    height: 300px;
+    animation: wave linear 30s infinite;
+}
+
+@keyframes wave {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
+.control {
+    overflow: hidden;
+}
+
+/* scroll */
+.scrolling {
+    width: 100%;
+    overflow: hidden;
+}
+
+.scrolling h2 {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    font-size: 10vw;
+    white-space: nowrap;
+    animation: scrolling 12s linear infinite;
+}
+
+@keyframes scrolling {
+    0% {
+        transform: translateX(-100%);
+    }
+
+    100% {
+        transform: translateX(0%);
+    }
+}
+
+/* scroll end */
+
+.circle-2 {
+    margin: 0px auto;
+}
+
+.circle-2 img {
+    border-radius: 50%;
+    background-color: #FFD750;
+    padding: 10vh 7vh;
+}
