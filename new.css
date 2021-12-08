@@ -40,6 +40,10 @@ body {
     background-color: #FFD750;
 }
 
+.text-yellow {
+    color: #FFD750;
+}
+
 .text-lblue {
     color: #3C50FF;
 }
@@ -395,4 +399,25 @@ a {
     border-radius: 50%;
     background-color: #FFD750;
     padding: 10vh 7vh;
+}
+
+.instagram {
+    color: white;
+    transition: color 300ms;
+}
+
+.instagram:hover {
+    color: #FFD750;
+}
+
+.img-footer {
+    height: 2.5vw;
+}
+
+.a-tag-mail {
+    transition: color 300ms;
+}
+
+.a-tag-mail:hover {
+    color: #fff3ca;
 }
