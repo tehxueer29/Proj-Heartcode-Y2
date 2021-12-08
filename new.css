@@ -186,9 +186,8 @@ h1 {
 }
 
 .position-arrow {
-    position: absolute;
-    bottom: 0;
-    left: calc(50vw - 2px);
+    position: relative;
+    bottom: -5vh;
     height: 100px;
 }
 
