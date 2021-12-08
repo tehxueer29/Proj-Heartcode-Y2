@@ -186,6 +186,8 @@ h1 {
 }
 
 .position-arrow {
+    position: relative;
+    bottom: -5vh;
     height: 100px;
 }
 
